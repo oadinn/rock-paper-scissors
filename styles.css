@@ -1,18 +1,61 @@
 html {
     margin: 0;
     font-family: Helvetica;
+    background-color: #183A37;
+}
+
+body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 97vh;
+}
+
+p {
+    margin: 0;
 }
 h1 {
     text-align: center;
+    color: #FDECEF;
+    font-size: 1.5rem;
+}
+.header-container {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    border: 2px solid white;
+    border-radius: .5rem;
+    width: 500px;
 }
 .score-container {
     display: flex;
-    gap: 5rem;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: .3rem;
+    font-size: 1.2rem;
+    padding: 0.2rem 1rem .5rem 1rem;
+}
+
+.score {
+    color: #404E7C;
+}
+
+#p-number, #c-number {
+    font-weight: bold;
+    color: #251F47;
+    margin-top: .3rem;
+    font-size: 2rem;
 }
 
 #game-desc {
     text-align: center;
+    margin-top: 5rem;
+    font-weight: bold;
+    color: #63D471;
+    font-size: 1.5rem;
 }
 button {
     cursor: pointer;
@@ -20,21 +63,73 @@ button {
 #button-container {
     display: flex;
     justify-content: center;
-    gap: 3rem;
+    gap: 5rem;
+    margin-top: 2rem;
 }
 
+.choice {
+    padding: 2rem;
+    border-radius: 50%;
+    border: none;
+    background-color: #69FFF1;
+}
+
+.choice:hover {
+    transform: scale(1.1);
+    transition: .3s;
+}
+
+.choice:active {
+    transform: scale(0.95);
+    transition: .1s;
+}
+
+#restart-container {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+}
 .restart-btn {
-    margin: 0 auto;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    border: none;
+    font-size: 1rem;
+    border-radius: .3rem;
+}
+
+.restart-btn:hover {
+    transform: scale(1.1);
+    transition: .2s;
+}
+
+.restart-btn:active {
+    transform: scale(.95);
+    transition: .1s;
 }
 footer {
     display: flex;
-    margin-top: auto;
     justify-content: center;
     align-items: center;
     gap: .5rem;
+    margin-top: auto;
 }
 
 .github {
-    max-width: 1.5rem;
-    max-height: 1.5rem;
+    max-width: 1.75rem;
+    max-height: 1.75rem;
+}
+
+a {
+    text-decoration: none;
+    color: #69FFF1;
+    font-size: 1.25rem;
+}
+
+a:hover {
+    transform: scale(1.1);
+    transition: .2s;
+}
+a:active {
+    transform: scale(.95);
+    transition: .1s;
 }

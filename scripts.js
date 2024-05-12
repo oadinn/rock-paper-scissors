@@ -15,8 +15,8 @@ const getComputerChoice = () => {
 }
   
 const displayScore = () => {
-    domPlayerScore.textContent = "Player: " + playerScore
-    domComputerScore.textContent = "Computer: " + computerScore
+    domPlayerScore.textContent = playerScore
+    domComputerScore.textContent = computerScore
     return
 }
 
@@ -26,8 +26,8 @@ const gameOver = () => playerScore === 5 || computerScore === 5
 const endgameUI = () => {
     playerScore === 5 ? gameDesc.textContent = "You won against the computer" : gameDesc.textContent = "Computer won against you"
     restartBtn.textContent = "Play again"
-    buttonContainer.after(restartBtn)
-    restartBtn.addClass("restart-btn")
+    restartBtn.classList.add("restart-btn")
+    restartContainer.appendChild(restartBtn)
     return
 }
 
@@ -74,10 +74,11 @@ const restartGame = () => {
 const rock = document.getElementById('rock')
 const paper = document.getElementById('paper')
 const scissors = document.getElementById('scissors')
-const domPlayerScore = document.getElementById('player-score')
-const domComputerScore = document.getElementById('computer-score')
+const domPlayerScore = document.getElementById('p-number')
+const domComputerScore = document.getElementById('c-number')
 const gameDesc = document.getElementById('game-desc')
 const buttonContainer = document.getElementById('button-container')
+const restartContainer = document.getElementById('restart-container')
 
 // event listeners
 rock.addEventListener('click', () => playRound('rock', getComputerChoice()))
