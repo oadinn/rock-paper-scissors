@@ -1,3 +1,5 @@
+
+
 let playerScore = 0
 let computerScore = 0
 
@@ -11,11 +13,6 @@ const getComputerChoice = () => {
         case 2: 
             return "scissors"
     }
-}
-
-const getPlayerChoice = () => {
-    const choice = prompt("Enter a choice")
-    return choice.toLowerCase()
 }
 
 const playRound = (playerChoice, computerChoice) => {
@@ -37,13 +34,11 @@ const playRound = (playerChoice, computerChoice) => {
     }
 }
 
-const playGame = () => {
-    for (let i = 0; i < 5; i++) {
-        let playerChoice = getPlayerChoice()
-        let computerChoice = getComputerChoice()
+// query selectors
+const rock = document.getElementById('rock')
+const paper = document.getElementById('paper')
+const scissors = document.getElementById('scissors')
 
-        playRound(playerChoice, computerChoice)
-    }
-}
-
-playGame()
+rock.addEventListener('click', () => playRound('rock', getComputerChoice()))
+paper.addEventListener('click', () => playRound('paper', getComputerChoice()))
+scissors.addEventListener('click', () => playRound('scissors', getComputerChoice()))
