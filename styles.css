@@ -1,0 +1,40 @@
+html {
+    margin: 0;
+    font-family: Helvetica;
+}
+h1 {
+    text-align: center;
+}
+.score-container {
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+}
+
+#game-desc {
+    text-align: center;
+}
+button {
+    cursor: pointer;
+}
+#button-container {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.restart-btn {
+    margin: 0 auto;
+}
+footer {
+    display: flex;
+    margin-top: auto;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+
+.github {
+    max-width: 1.5rem;
+    max-height: 1.5rem;
+}

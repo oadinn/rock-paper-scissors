@@ -25,7 +25,9 @@ const gameOver = () => playerScore === 5 || computerScore === 5
 
 const endgameUI = () => {
     playerScore === 5 ? gameDesc.textContent = "You won against the computer" : gameDesc.textContent = "Computer won against you"
-    buttonContainer.append(restartBtn)
+    restartBtn.textContent = "Play again"
+    buttonContainer.after(restartBtn)
+    restartBtn.addClass("restart-btn")
     return
 }
 
@@ -84,4 +86,5 @@ scissors.addEventListener('click', () => playRound('scissors', getComputerChoice
 
 // restart button
 const restartBtn = document.createElement('button')
+
 restartBtn.addEventListener('click', () => restartGame())
